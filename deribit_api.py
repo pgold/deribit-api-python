@@ -176,6 +176,14 @@ class RestClient(object):
         return self.request("/api/v1/private/getopenorders", options)
 
 
+    def orderstate(self, orderId):
+        options = {
+            "orderId": orderId
+        }
+
+        return self.request("/api/v1/private/orderstate", options)
+
+
     def positions(self):
         return self.request("/api/v1/private/positions", {})
 
